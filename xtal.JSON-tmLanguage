@@ -1,0 +1,86 @@
+{
+  "name": "Xtal",
+  "scopeName": "source.xtal",
+  "fileTypes": ["xtal"],
+  "uuid": "d515f1c3-cf0e-4059-a955-bbbb2e3491e2",
+  "patterns":[
+    {
+      "match": "//.*",
+      "name": "comment.line.xtal",
+      "comment": "comment"
+    },
+    {
+      "begin": "/\\*",
+      "end": "\\*/",
+      "name": "comment.line.block.xtal",
+      "comment": "comment"
+    },
+    {
+      "match": "\\+=|-=|\\*=|/=|\\+\\+|--|<<=|>>=|&=|\\|=|\\^=|<<|>>|<=|>=|==|!=|<|>|&&|\\|\\||!|\\+|-|\\*|/|&|\\||\\^|%|=",
+      "name": "keyword.operator.xtal",
+      "comment": "operator"
+    },
+    {
+      "match": "\\b(fun|fiber|method|if|else|while|for|break|continue|yield|return|throw|try|catch|finally|class|public|protected|private|singleton)\\b",
+      "name": "keyword.control.xtal",
+      "comment": "keyword"
+    },
+    {
+      "match": "\\b(true|false|null)\\b",
+      "name": "constant.language.xtal",
+      "comment": "constant language"
+    },
+    {
+      "match": "\\b(this)\\b",
+      "name": "variable.language.xtal",
+      "comment": "variable language"
+    },
+    {
+      "match": "\".*?\"",
+      "name": "string.quoted.double.xtal",
+      "comment": "string literal"
+    },
+    {
+      "match": "'.*?'",
+      "name": "string.quoted.single.xtal",
+      "comment": "string literal"
+    },
+    {
+      "match": "\\b(\\d+(\\.\\d+)?|0[Bb][01]+|0[Xx][0-9ABCDEFabcdef]+)\\b",
+      "name": "constant.numeric.xtal",
+      "comment": "number literal"
+    },
+
+    {
+      "match": "\\b(to_s|to_i|to_f|p|length|acos|asin|atan|atan2|ceil|cos|exp|floor|log|pow|sin|sqrt|tan|abs|max|min|random|random_range)\\b",
+      "name": "support.function.xtal",
+      "comment": "library"
+    },
+    {
+      "match": "\\b(PI|E)\\b",
+      "name": "support.constant.xtal",
+      "comment": "library"
+    },
+    {
+      "match": "\\b(lib|grobal|math|filesystem|debug)\\b",
+      "name": "support.variable.xtal",
+      "comment": "library"
+    },
+    {
+      "match": "\\b(Any|Null|Undefined|Int|Float|Bool|String|Array|Map|Fun|Method|Fiber|Values|Lambda|Iterator|Iterable|ClassSet|Text|Thread|Mutex|Stream|MemoryStream|PointerStream|StringStream|FileStream|CompressEncoder|CompressDecoder|StdinStream|StdoutStream|StderrStream|Lib|Global|Exception|Range|IntRange|FloatRange|ChRange|Frame|Arguments)\\b",
+      "name": "support.type.xtal",
+      "comment": "library"
+    },
+
+    {
+      "match": "\\b\\w+(?=\\()",
+      "name": "entity.name.function.xtal",
+      "comment": "function"
+    },
+    {
+      "match": "\\b\\w+(?=\\s*:)",
+      "name": "entity.name.variable.xtal",
+      "comment": "variable"
+    }
+  ]
+}
